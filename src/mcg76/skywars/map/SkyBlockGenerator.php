@@ -3,7 +3,7 @@
 namespace mcg76\skywars\map;
 
 use pocketmine\level\generator\Generator;
-use pocketmine\level\ChunkManager;
+use pocketmine\level\generator\ChunkManager;
 use pocketmine\math\Vector3;
 use pocketmine\utils\Random;
 use pocketmine\block\Block;
@@ -282,9 +282,9 @@ class SkyBlockGenerator extends Generator {
 		return Block::STONE;
 	}
 	public function populateChunk($chunkX, $chunkZ) {
-		$this->random->setSeed ( 0xdeadbeef ^ ($chunkX << 8) ^ $chunkZ ^ $this->$level, pocketmine\utils\Random $random, ->getSeed () );
+		$this->random->setSeed ( 0xdeadbeef ^ ($chunkX << 8) ^ $chunkZ ^ $this->level->getSeed () );
 		foreach ( $this->populators as $populator ) {
-			$this->random->setSeed ( 0xdeadbeef ^ ($chunkX << 8) ^ $chunkZ ^ $this->$level, pocketmine\utils\Random $random->getSeed () );
+			$this->random->setSeed ( 0xdeadbeef ^ ($chunkX << 8) ^ $chunkZ ^ $this->level->getSeed () );
 			$populator->populate ( $this->level, $chunkX, $chunkZ, $this->random );
 		}
 	}
