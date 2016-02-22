@@ -3,7 +3,7 @@
 namespace mcg76\skywars\map;
 
 use pocketmine\level\generator\Generator;
-use pocketmine\level\generator\GenerationChunkManager;
+use pocketmine\level\generator\ChunkManager;
 use pocketmine\math\Vector3;
 use pocketmine\utils\Random;
 use pocketmine\block\Block;
