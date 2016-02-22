@@ -76,7 +76,7 @@ class SkyBlockGenerator extends Generator {
 				Block::DEAD_BUSH => 3 
 		];
 	}
-	public function init(GenerationChunkManager $level, Random $random) {
+	public function init(ChunkManager $level, Random $random) {
 		$this->level = $level;
 		$this->random = $random;
 		$this->floatSeed = $this->random->nextFloat ();
