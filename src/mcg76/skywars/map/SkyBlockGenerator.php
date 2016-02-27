@@ -287,8 +287,8 @@ class SkyBlockGenerator extends Generator {
 		foreach($this->populators as $populator){
 			$populator->populate($this->level, $chunkX, $chunkZ, $this->random);
 		
+	
+        }
+	public function getSpawn(){
+		return new Vector3(127.5, 128, 127.5);
 	}
-	public function getSpawn() {
-		return new Vector3 ( 132, 57, 129 );
-	}
-
