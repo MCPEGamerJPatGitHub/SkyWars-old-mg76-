@@ -292,4 +292,4 @@ class SkyBlockGenerator extends Generator {
 	public function getSpawn() {
 		return new Vector3 ( 132, 57, 129 );
 	}
-}
+
