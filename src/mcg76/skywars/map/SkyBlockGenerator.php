@@ -281,12 +281,13 @@ class SkyBlockGenerator extends Generator {
 		}
 		return Block::STONE;
 	}
-        
-        public function populateChunk($chunkX, $chunkZ){
+        	public function populateChunk($chunkX, $chunkZ){
 		$this->random->setSeed(0xdeadbeef ^ ($chunkX << 8) ^ $chunkZ ^ $this->level->getSeed());
 		foreach($this->populators as $populator){
-			$populator->populate($this->level, $chunkX, $chunkZ, $this->random);
-        }
+			$populator->populate($this->level, $chunkX, $chunkZ, $this->random);		
+	}
 	public function getSpawn(){
 		return new Vector3(127.5, 128, 127.5);
 	}
+}
+      
