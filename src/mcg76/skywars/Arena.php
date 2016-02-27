@@ -134,8 +134,6 @@ class Arena {
 	public static function loadArenas($plugin) {
 		$path = $plugin->getDataFolder () . "arena/";
 		if (! file_exists ( $path )) {
-			@mkdir ( $this->pgin->getDataFolder () );
-			@mkdir ( $path );
 			//nothing to load
 			return;
 		}
