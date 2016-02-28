@@ -136,11 +136,7 @@ class Arena {
 		if (! file_exists ( $path )) {
 			@mkdir ( $path )
 			//nothing to load
-			
-			//skip folders
-			if ($filename=="chestlocation" || $filename=="playerlocation" || $filename=="singleclickbutton" || $filename=="teamclickbutton") {
-				continue;
-			}						
+		
 			if ($filename != "." && $filename != "..") {
 				$plugin->getLogger()->info ( "file - " . $filename );
 				
