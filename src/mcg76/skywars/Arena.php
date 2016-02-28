@@ -138,7 +138,7 @@ class Arena {
 			//nothing to load
 			
 		
-		$plugin->getLogger()->info ( "loading arenas on " . $path );		
+		$plugin->log ( "#loading arenas on " . $path );
 		$handler = opendir ( $path );
 		while ( ($filename = readdir ( $handler )) !== false ) {
 			//skip sub folders
