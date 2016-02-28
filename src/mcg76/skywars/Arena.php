@@ -126,16 +126,15 @@ class Arena {
 		return $out;
 	}
 	public function delete() {
-		$path = $this->pgin->getDataFolder () . "arena/";
+		$path = $plugin->getDataFolder () . "arena/";
 		$name = $this->name;
 		@unlink ( $path . "$name.yml" );
 	}
 	
 	public function loadArenas() {
-	$path = $plugin->getDataFolder () . self::arena/;
+		$path = $plugin->getDataFolder () . self::arena;
 		if (! file_exists ( $path )) {
-			@mkdir ( $this->pgin->getDataFolder () );
-			@mkdir ( $path );
+			@mkdir ( $path )
 			//nothing to load
 			return;
 		}
