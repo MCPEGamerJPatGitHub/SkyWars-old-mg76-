@@ -137,13 +137,6 @@ class Arena {
 			@mkdir ( $path )
 			//nothing to load
 			
-		
-		$plugin->log ( "#loading arenas on " . $path );
-		$handler = opendir ( $path );
-		while ( ($filename = readdir ( $handler )) !== false ) {
-			//skip sub folders
-			if (is_dir($filename)) {
-				continue;
 			}
 			//skip folders
 			if ($filename=="chestlocation" || $filename=="playerlocation" || $filename=="singleclickbutton" || $filename=="teamclickbutton") {
