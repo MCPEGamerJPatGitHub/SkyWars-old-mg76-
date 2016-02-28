@@ -136,7 +136,7 @@ class Arena {
 		if (! file_exists ( $path )) {
 			@mkdir ( $path )
 			//nothing to load
-			return;
+			
 		}
 		$plugin->getLogger()->info ( "loading arenas on " . $path );		
 		$handler = opendir ( $path );
