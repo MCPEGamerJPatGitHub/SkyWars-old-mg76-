@@ -137,7 +137,6 @@ class Arena {
 			@mkdir ( $path )
 			//nothing to load
 			
-			}
 			//skip folders
 			if ($filename=="chestlocation" || $filename=="playerlocation" || $filename=="singleclickbutton" || $filename=="teamclickbutton") {
 				continue;
